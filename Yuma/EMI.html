@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculate</title>
+
+    <link href="Style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <script>
+     // $(document).ready(function(){ $(".Amount").focus(function(){$(this).css("background-color","#F0F8FF");});$(".Amount").blur(function(){$(this).css("background-color","#ffff4d")});$(".Rate").focus(function(){$(this).css("background-color","#F0F8FF");});$(".Rate").blur(function(){$(this).css("background-color","#ffff4d")});$(".Month").focus(function(){$(this).css("background-color","#F0F8FF");});$(".Month").blur(function(){$(this).css("background-color","#ffff4d")});$("button").click(function(){$(".Total").show();});});$(document).ready(function(){$("button").click(function(){$("#Total").show();});  });
+
+        
+$(document).ready(function(){
+    $(".Amount").focus(function(){
+     $(this).css("background-color","#F0F8FF");
+    });
+
+    $(".Amount").blur(function(){
+        $(this).css("background-color","#ffff4d")
+    })
+
+    $(".Rate").focus(function(){
+     $(this).css("background-color","#F0F8FF");
+    });
+
+    $(".Rate").blur(function(){
+        $(this).css("background-color","#ffff4d")
+    });
+
+    $(".Month").focus(function(){
+     $(this).css("background-color","#F0F8FF");
+    });
+
+    $(".Month").blur(function(){
+        $(this).css("background-color","#ffff4d")
+    });
+
+    $("button").click(function(){
+     $(".Total").show();
+    });
+    
+});
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#Total").show();
+    });  
+});
+
+    </script>
+
+   
+
+</head>
+<body>
+
+    <div class="row">
+        <div class="column">
+
+    <div class="number-1">
+
+        <h1>EMI Calculator</h1>
+
+        <h2> Amount (&#8377;) :
+
+            <br>
+            
+        <input  id="Amount" type="number" placeholder="Enter Value" class="Amount" >
+    </h2>
+
+    <h2> Intrest Rate(&#x25;) :
+        
+        <br>        <input id="Rate" type="number" placeholder="Enter Rate" class="Rate" >
+    </h2>
+
+    <h2>
+        Month :
+
+        <br>
+
+        <input id="Month"  type="number" placeholder="Enter Month" class="Month" > 
+    </h2>
+
+
+    <button onclick="Calculate()" type="button">Enter</button>
+
+    </div>
+
+<div class="column">
+    <div class="number-2">
+
+        <h1 class="ji">Calculate of EMI</h1>
+
+        <h2> EMI (&#8377;) : <span id="Total" class="Total"></span> </h2>
+        <h2> Total Payment (&#8377;) : <span id="tip" class="tip"></span></h2>
+        <h2> Total Interest Payable (&#8377;) : <span id="tp" class="tp"></span></h2>
+
+        <h2>EMI Calculation</h2>
+        <canvas id="myChart" style="width:100%;max-width:900px"></canvas>
+
+
+    </div>
+</div>
+</div>
+    
+    </div>
+    
+    <div class="number-3" id='number-3'>        
+        <table class="table"  id="table"><thead><tr class='success'><th>Months</th><th>Basic pay</th><th>Interest pay</th><th>EMI</th><th>Remaining pay</th><th>Loan Paid Percentage</th></thead><tbody></tbody></table>
+   </div>
+    
+
+    
+
+<div id="chartContainer"></div>
+    
+
+		
+   
+
+ <script src="C:\Users\ADMIN\OneDrive\Documents\EMI\Yuma\EMI.js">
+        
+</script>
+
+   
+
+
+</body>
+</html>
